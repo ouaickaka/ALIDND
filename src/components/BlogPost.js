@@ -2,11 +2,13 @@ import React from 'react';
 import ColorCycleTitle from './ColorCycleTitle'; // Handles the title cycling
 import '../styles/main.css';
 
-const BlogPost = ({ title, content, date, category, isLitmusOn, isLitmusPlusOn, categoryColor }) => {
+const BlogPost = ({ title, content, date, category, isLitmusOn, isLitmusPlusOn, categoryColors }) => {
+  // Get the background color from categoryColors or default to "Unknown"
+  const backgroundColor = categoryColors[category] || categoryColors["Unknown"];
   // Format the date into 'Month DD, YYYY'
   const formattedDate = new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
-    month: 'long',
+    month: 'short',
     day: 'numeric',
   });
 
@@ -25,7 +27,7 @@ const BlogPost = ({ title, content, date, category, isLitmusOn, isLitmusPlusOn, 
       {/* Date and Category */}
       <div className="blog-post-footer">
         <span className="blog-post-date">{formattedDate}</span>
-        <span className="blog-post-category" style={{ backgroundColor: categoryColor }}>
+        <span className="blog-post-category" style={{ backgroundColor: backgroundColor }}>
           {category}
         </span>
       </div>

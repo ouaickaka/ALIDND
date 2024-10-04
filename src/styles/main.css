@@ -1,7 +1,7 @@
 /* Variables */
 @font-face {
-  font-family: 'Syne Mono';
-  src: url('../fonts/SyneMono-Regular.ttf') format('truetype');
+  font-family: "Syne Mono";
+  src: url("../fonts/SyneMono-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -27,11 +27,16 @@
   --color-text-light: #fafafa;
   --color-primary: var(--color-blue);
   --color-secondary: var(--color-red);
-  --font-family-heading: 'Old English Text MT', serif;
-  --font-family-body: 'Syne Mono', sans-serif;
+  --font-family-heading: "Old English Text MT", serif;
+  --font-family-body: "Syne Mono", sans-serif;
+  --spacing-box: 2px 12px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
+  --spacing-xlg: 32px;
+  --radius-sm:4px;
+  --radius-md:8px
+  --radius-lg:12px
 }
 
 /* Global Styling */
@@ -49,17 +54,38 @@ body {
   margin: 0 auto;
   padding: var(--spacing-md);
 }
+.app-header{
+  display: flex; /* Enable flexbox */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px; 
+}
+.app-header h1{
+  font-size: 54px;
+  margin: 0;
+  padding: 0;
+}
+.time-display p{
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+  padding: 0;
+}
 
 /* Controls Styling */
 .controls {
   display: flex;
   gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xlg);
+  justify-content: center; /* Center horizontally */
 }
 
 .controls input,
 .controls select {
   padding: var(--spacing-sm);
+  font-family: var(--font-family-body);
   border-radius: 4px;
   border: 1px solid var(--color-ink);
   background-color: var(--color-charcoal);
@@ -74,7 +100,8 @@ body {
 /* Title Box */
 .blog-post-title-box {
   background-color: var(--color-charcoal);
-  padding: var(--spacing-md);
+  border: 1px solid var(--color-ink);
+  padding: var(--spacing-box);
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -82,7 +109,8 @@ body {
 /* Content Box */
 .blog-post-content-box {
   background-color: var(--color-charcoal);
-  padding: var(--spacing-md);
+  border: 1px solid var(--color-ink);
+  padding: var(--spacing-box);
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -96,18 +124,18 @@ body {
 /* Date */
 .blog-post-date {
   font-size: 14px;
+  font-variant-numeric: tabular-nums;
   color: var(--color-text-light);
   margin-right: auto; /* Aligns to the left */
 }
 
 /* Category Badge */
 .blog-post-category {
-  font-size: 14px;
-  color: black;
+  font-size: 16px;
   padding: 4px 8px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   margin-left: 10px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 /* Blog Post Footer Styling */
@@ -142,7 +170,7 @@ body {
 
 /* Tooltip Arrow */
 .custom-tooltip::after {
-  content: '';
+  content: "";
   position: absolute;
   left: -5px; /* Position arrow to the left */
   top: 50%;

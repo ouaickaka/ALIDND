@@ -1,37 +1,53 @@
 import React from 'react';
-import { categories, sortOptions } from '../utils/config';
+import '../styles/main.css';
 
-const Controls = ({ searchTerm, setSearchTerm, filterCategory, setFilterCategory, sortOrder, setSortOrder }) => (
-  <div className="controls">
-    <input
-      type="text"
-      placeholder="Search..."
-      className="controls-input"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-    
-    <select
-      className="controls-select"
-      value={filterCategory}
-      onChange={(e) => setFilterCategory(e.target.value)}
-    >
-      <option value="">All Categories</option>
-      {categories.map((category) => (
-        <option key={category} value={category}>{category}</option>
-      ))}
-    </select>
-    
-    <select
-      className="controls-select"
-      value={sortOrder}
-      onChange={(e) => setSortOrder(e.target.value)}
-    >
-      {sortOptions.map((option) => (
-        <option key={option.value} value={option.value}>{option.label}</option>
-      ))}
-    </select>
-  </div>
-);
+// BadgeFilterControls component
+const BadgeFilterControls = ({ categoryFilter, setCategoryFilter, categoryColors, searchQuery, setSearchQuery, sortOrder, setSortOrder }) => {
+  // Create a list of categories dynamically from `categoryColors`, excluding "Unknown"
+  const categories = Object.keys(categoryColors).filter(cat => cat !== 'Unknown');
 
-export default Controls;
+  return (
+    <div className="controls">
+      {/* Search Control */}
+      <div className="control-item">
+        <input
+          id="searchQuery"
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search your soul..."
+        />
+      </div>
+
+      {/* Filter by Category Control */}
+      <div className="control-item">
+        <select
+          id="categoryFilter"
+          value={categoryFilter}
+          onChange={(e) => setCategoryFilter(e.target.value)}
+        >
+          <option value="">All</option>
+          {categories.map((cat, index) => (
+            <option key={index} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Sort by Date Control */}
+      <div className="control-item">
+        <select
+          id="sortOrder"
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value)}
+        >
+          <option value="desc">Newest</option>
+          <option value="asc">Oldest</option>
+        </select>
+      </div>
+    </div>
+  );
+};
+
+export default BadgeFilterControls;

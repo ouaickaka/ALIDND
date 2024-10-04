@@ -1,35 +1,74 @@
 [
-    {
-      "id": 1,
-      "title": "First Blog Post",
-      "content": "This is the content of the first post.",
-      "date": "2000-08-12",
-      "category": "Tech",
-      "attachments": []
-    },
-    {
-      "id": 2,
-      "title": "Second Blog Post",
-      "content": "Content of the second post.",
-      "date": "2001-09-15",
-      "category": "Life",
-      "attachments": []
-    },
-    {
-        "id": 3,
-        "title": "Second Blog Post",
-        "content": "Content of the second post.",
-        "date": "2001-09-15",
-        "category": "Life",
-        "attachments": []
-      },
-      {
-        "id": 4,
-        "title": "Second Blog Post",
-        "content": "Content of the second post.",
-        "date": "2001-09-15",
-        "category": "Life",
-        "attachments": []
-      }
-  ]
-  
+  {
+    "id": 1,
+    "title": "The Future of AI in Tech",
+    "content": "A quick overview of how artificial intelligence is shaping technology.",
+    "date": "2024-09-10",
+    "category": "Tech",
+    "attachments": []
+  },
+  {
+    "id": 2,
+    "title": "Balancing Work and Personal Life",
+    "content": "Exploring ways to maintain a healthy work-life balance.",
+    "date": "2024-08-25",
+    "category": "Life",
+    "attachments": []
+  },
+  {
+    "id": 3,
+    "title": "Healthy Living Tips for Busy People",
+    "content": "Quick tips for maintaining a healthy lifestyle amidst a hectic schedule.",
+    "date": "2024-07-14",
+    "category": "Health",
+    "attachments": []
+  },
+  {
+    "id": 4,
+    "title": "Understanding Financial Independence",
+    "content": "An introduction to building wealth and achieving financial independence.",
+    "date": "2024-06-19",
+    "category": "Money",
+    "attachments": []
+  },
+  {
+    "id": 5,
+    "title": "Top 10 Travel Destinations for 2024",
+    "content": "A curated list of must-visit places around the world for the upcoming year.",
+    "date": "2024-05-10",
+    "category": "Travel",
+    "attachments": []
+  },
+  {
+    "id": 6,
+    "title": "Healthy Eating: The Best Food Choices",
+    "content": "Simple tips to incorporate healthy and delicious food into your daily diet.",
+    "date": "2024-04-22",
+    "category": "Food",
+    "attachments": []
+  },
+  {
+    "id": 7,
+    "title": "The Best Board Games for Family Fun",
+    "content": "A guide to some of the best board games for a fun night in with family and friends.",
+    "date": "2024-03-18",
+    "category": "Games",
+    "attachments": []
+  },
+  {
+    "id": 8,
+    "title": "Lifelong Learning: Skills for Personal Growth",
+    "content": "An exploration of the benefits of continuous learning and personal development.",
+    "date": "2024-02-11",
+    "category": "Learn",
+    "attachments": []
+  },
+  {
+    "id": 9,
+    "title": "Dealing with Uncertainty in Life",
+    "content": "An insightful take on how to manage unknown situations and navigate life's surprises.",
+    "date": "2024-01-15",
+    "category": "Unknown",
+    "attachments": []
+  }
+]
