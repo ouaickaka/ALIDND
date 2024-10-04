@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "title": "First Blog Post",
+      "content": "This is the content of the first post.",
+      "date": "2000-08-12",
+      "category": "Tech",
+      "attachments": []
+    },
+    {
+      "id": 2,
+      "title": "Second Blog Post",
+      "content": "Content of the second post.",
+      "date": "2001-09-15",
+      "category": "Life",
+      "attachments": []
+    },
+    {
+        "id": 3,
+        "title": "Second Blog Post",
+        "content": "Content of the second post.",
+        "date": "2001-09-15",
+        "category": "Life",
+        "attachments": []
+      },
+      {
+        "id": 4,
+        "title": "Second Blog Post",
+        "content": "Content of the second post.",
+        "date": "2001-09-15",
+        "category": "Life",
+        "attachments": []
+      }
+  ]
+  
